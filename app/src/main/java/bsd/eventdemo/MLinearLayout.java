@@ -45,6 +45,7 @@ public class MLinearLayout extends LinearLayout {
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
                 Log.i("=========", getClass().getSimpleName() + "==onTouchEvent");
+//                getChildAt(0).dispatchTouchEvent(event);
                 break;
         }
         return super.onTouchEvent(event);

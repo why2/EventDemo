@@ -40,6 +40,8 @@ public class OLinearLayout extends LinearLayout {
         switch (ev.getAction()) {
             case MotionEvent.ACTION_DOWN:
                 Log.i("=========", getClass().getSimpleName() + "==onTouchEvent");
+                //即使父布局拦截了事件，如果手动的让子布局手动的调用分发事件，子布局还是可以获得事件的
+//                getChildAt(0).dispatchTouchEvent(ev);
                 break;
         }
         return super.onTouchEvent(ev);
